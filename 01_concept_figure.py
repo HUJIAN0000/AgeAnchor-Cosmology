@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed May 20 01:20:37 2026
+
+@author: Jian Hu
+Email: dg1626002@smail.nju.edu.cn
+
 Figure 1: Conceptual illustration of how the cosmic age prior breaks
 the H0-Omega_m degeneracy in flat LambdaCDM.
 
