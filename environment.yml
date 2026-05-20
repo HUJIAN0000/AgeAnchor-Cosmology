@@ -1,0 +1,43 @@
+# Conda environment for the Hubble-tension / stellar-age analysis pipeline.
+#
+# Create with:
+#     conda env create -f environment.yml
+#     conda activate hubble-stellar-ages
+#
+# Pinned versions match the paper's "Software" Methods paragraph:
+#   Python 3.11, emcee 3.1, numba 0.59, numpy 1.26,
+#   scipy 1.13, pandas 2.2, getdist 1.5.
+#
+# Tested on Linux (Ubuntu 22.04) and Windows 11. Should also work
+# on macOS (Intel or Apple Silicon via osx-arm64 conda-forge wheels).
+
+name: hubble-stellar-ages
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ---- Core Python ----
+  - python=3.11
+
+  # ---- Scientific stack (versions match published analysis) ----
+  - numpy=1.26
+  - scipy=1.13
+  - pandas=2.2
+  - matplotlib>=3.8,<3.10
+
+  # ---- MCMC + JIT acceleration ----
+  - emcee=3.1
+  - numba=0.59
+
+  # ---- Posterior visualisation ----
+  - getdist=1.5
+
+  # ---- Progress bars + utilities ----
+  - tqdm
+  - pip
+
+  # ---- pip-only extras (none required, but kept for completeness) ----
+  - pip:
+      - corner>=2.2     # optional; cosmo_tools.plot_corner uses it if available
