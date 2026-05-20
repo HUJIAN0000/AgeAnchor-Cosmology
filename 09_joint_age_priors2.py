@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed May 20 02:10:40 2026
+
+@author: Jian Hu
+Email: dg1626002@smail.nju.edu.cn
 Extended Data: joint inference using TWO independent stellar-age anchors
 (Valcin et al. 2021 globular clusters + Lundkvist et al. 2025 HD 140283),
 versus each one alone.
@@ -28,7 +32,7 @@ from scipy.interpolate import RegularGridInterpolator
 
 from cosmoc import (
     load_pantheon_plus,
-    PLANCK_H0, SH0ES_H0, SH0ES_MB,   # 绘图用参考带
+    PLANCK_H0, SH0ES_H0, SH0ES_MB,   # reference bands for plotting
 )
 
 c_light = 299792.458  # km/s
@@ -83,7 +87,7 @@ def compute_grids_1d_lcdm_cpu(z_sn, Om_grid):
 
 class GlobalCosmoDataCache1D:
     def __init__(self):
-        print("\n=== 初始化数据与 1D (Om) 积分网格 (纯 CPU FP64) ===")
+        print("\n=== Initialize data and 1D (Om) integration grid (pure CPU FP64) ===")
         self.z_sn, self.mb_sn, self.inv_cov_sn = load_pantheon_plus()
         self.z_sn = self.z_sn.astype(np.float64)
         self.mb_sn = self.mb_sn.astype(np.float64)
@@ -91,7 +95,7 @@ class GlobalCosmoDataCache1D:
         self.Om_grid = np.linspace(0.05, 0.65, 500, dtype=np.float64)
         t0 = time.time()
         grid_sn, grid_age = compute_grids_1d_lcdm_cpu(self.z_sn, self.Om_grid)
-        print(f"✅ 1D 网格预计算完成，耗时: {time.time() - t0:.4f} 秒\n")
+        print(f"✅ 1D grid pre-computation completed in {time.time() - t0:.4f} seconds\n")
         self.interp_sn = RegularGridInterpolator((self.Om_grid,), grid_sn, bounds_error=False, fill_value=None)
         self.interp_age = RegularGridInterpolator((self.Om_grid,), grid_age, bounds_error=False, fill_value=None)
 
@@ -184,14 +188,14 @@ def main():
     names  = ["Om", "H0", "MB", "dt"]
     labels = [r"\Omega_m", r"H_0", r"M_B", r"\Delta t"]
 
-    print("开始遍历 3 种组合配置并进行 MCMC 采样...")
+    print("Iterating through 3 configurations for MCMC sampling...")
     for (cname, specs, color) in configs:
         print(f"\n[Config] {cname}")
         t_start = time.time()
         like = LikelihoodAgesVectorizedCPU(specs, cache)
         flat = run_mcmc_vectorized(like, nsteps=5000, label=cname)
 
-        print(f"  --- posterior (耗时: {time.time() - t_start:.2f} 秒) ---")
+        print(f"  posterior (elapsed time: {time.time() - t_start:.2f} seconds ---")
         row = {"config": cname}
         for i, n in enumerate(names):
             med, hi, lo = percentiles_to_str(n, flat[:, i])
@@ -212,7 +216,7 @@ def main():
             labels=np.array(labels),
             label=cname, color=color,
         )
-        print(f"  ✅ 已保存链至: chain_joint_{safe_name}.npz")
+        print(f"  ✅ Saved chains to: chain_joint_{safe_name}.npz")
 
     # =====================================================
     # Pretty plot + reference bands
@@ -231,7 +235,7 @@ def main():
     PLANCK_COLOR = '#0066cc'
     SH0ES_COLOR  = '#cc0000'
     try:
-        # H0 占对角线索引 1 (Om 是 0)
+        # H0 occupies diagonal index 1 (Om is 0)
         axH0 = g.subplots[1, 1]
         if axH0 is not None:
             axH0.axvspan(PLANCK_H0[0] - PLANCK_H0[1], PLANCK_H0[0] + PLANCK_H0[1],
@@ -239,17 +243,17 @@ def main():
             axH0.axvspan(SH0ES_H0[0] - SH0ES_H0[1], SH0ES_H0[0] + SH0ES_H0[1],
                          color=SH0ES_COLOR, alpha=0.18, zorder=0)
 
-        # M_B 占对角线索引 2
+        # M_B occupies diagonal index 2
         axMB = g.subplots[2, 2]
         if axMB is not None:
             axMB.axvspan(SH0ES_MB[0] - SH0ES_MB[1], SH0ES_MB[0] + SH0ES_MB[1],
                          color=SH0ES_COLOR, alpha=0.18, zorder=0)
     except Exception as e:
-        print("⚠️ 无法添加参考阴影带:", e)
+        print("⚠️ Failed to add reference bands:", e)
 
     plt.savefig("EDFig5_joint_ages.pdf", bbox_inches='tight')
     plt.savefig("EDFig5_joint_ages.png", dpi=200, bbox_inches='tight')
-    print("✅ 已保存完美排版的 EDFig5_joint_ages.pdf / .png")
+    print("✅ Saved publication-ready EDFig5_joint_ages.pdf / .png")
 
     # ----- Text summary -----
     out = ["=" * 78, "EDFig5 — Joint age-prior comparison summary", "=" * 78]

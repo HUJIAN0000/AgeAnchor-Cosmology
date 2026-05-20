@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed May 20 02:04:40 2026
+
+@author: Jian Hu
+Email: dg1626002@smail.nju.edu.cn
 Extended Data: Sensitivity of the age-anchored H_0 to the assumed stellar-age
 systematic uncertainty sigma_age.
 
-【纯 CPU FP64 矢量化加速版】
-- 自动保存 MCMC 统计数据 (.npz) 并融合了 10_pretty_replot.py 中的高级美化画图。
+【Pure CPU FP64 Vectorized Accelerated Version】
+- Automatically save MCMC statistics (.npz) and polish plots.
 """
 
 import os
@@ -18,7 +22,7 @@ from scipy.interpolate import RegularGridInterpolator
 
 from cosmoc import (
     load_pantheon_plus,
-    PLANCK_H0, SH0ES_H0, SH0ES_MB # 引入绘图用参考带
+    PLANCK_H0, SH0ES_H0, SH0ES_MB # Load reference bands for plotting
 )
 
 c_light = 299792.458  # km/s
@@ -72,7 +76,7 @@ def compute_grids_1d_lcdm_cpu(z_sn, Om_grid):
 
 class GlobalCosmoDataCache1D:
     def __init__(self):
-        print("\n=== 初始化数据与 1D (Om) 积分网格 (纯 CPU FP64) ===")
+        print("\n=== Initialize data and 1D (Om) integration grid (pure CPU FP64) ===")
         self.z_sn, self.mb_sn, self.inv_cov_sn = load_pantheon_plus()
         self.z_sn = self.z_sn.astype(np.float64)
         self.mb_sn = self.mb_sn.astype(np.float64)
@@ -81,7 +85,7 @@ class GlobalCosmoDataCache1D:
         self.Om_grid = np.linspace(0.05, 0.65, 500, dtype=np.float64)
         t0 = time.time()
         grid_sn, grid_age = compute_grids_1d_lcdm_cpu(self.z_sn, self.Om_grid)
-        print(f"✅ 1D 网格预计算完成，耗时: {time.time() - t0:.4f} 秒")
+        print(f"✅ 1D grid pre-computation completed in {time.time() - t0:.4f} seconds")
         
         self.interp_sn = RegularGridInterpolator((self.Om_grid,), grid_sn, bounds_error=False, fill_value=None)
         self.interp_age = RegularGridInterpolator((self.Om_grid,), grid_age, bounds_error=False, fill_value=None)
@@ -159,17 +163,17 @@ def main():
         print(f"  sigma_t = {sigma:.2f} Gyr (耗时 {time.time()-t_start:.1f}s) -> "
               f"H0 = {h0p[1]:.2f} +{h0p[2]-h0p[1]:.2f}/-{h0p[1]-h0p[0]:.2f}")
 
-    # =============== [保存 MCMC 提取的统计数据] ===============
+    # =============== [Save extracted MCMC statistics] ===============
     np.savez_compressed(
         "chain_sigma_scan.npz",
         sigma_grid=np.array(sigma_grid),
         H0_med=H0_med, H0_lo=H0_lo, H0_hi=H0_hi,
         MB_med=MB_med, MB_lo=MB_lo, MB_hi=MB_hi,
     )
-    print("  ✅ 已保存扫描数据至: chain_sigma_scan.npz")
+    print("  ✅ Saved scan data to: chain_sigma_scan.npz")
 
     # =====================================================
-    # 融合 10_pretty_replot.py 的美化画图
+    # Prettify plots
     # =====================================================
     PLANCK_COLOR = '#0066cc'
     SH0ES_COLOR  = '#cc0000'
@@ -187,7 +191,7 @@ def main():
     
     ax1.set_xlabel(r'Assumed stellar-age systematic $\sigma_t$ [Gyr]', fontsize=14)
     ax1.set_ylabel(r'$H_0 \,\, [\mathrm{km\,s^{-1}\,Mpc^{-1}}]$', fontsize=14)
-    # 缩紧 Y 轴以获得更好视觉效果
+    # Tighten Y-axis limits for better visualization
     ax1.set_ylim(62, 75)
     ax1.set_xlim(0.20, 0.75)
     ax1.grid(alpha=0.3, ls='--')
@@ -205,7 +209,7 @@ def main():
     ax2.set_ylabel(r'$M_B \,\, [\mathrm{mag}]$', fontsize=14)
     ax2.invert_yaxis()
     ax2.set_xlim(0.20, 0.75)
-    # 缩紧 Y 轴
+    # Tighten Y-axis
     ax2.set_ylim(-19.10, -19.65)
     ax2.grid(alpha=0.3, ls='--')
     ax2.legend(fontsize=11, loc='lower right', frameon=True)

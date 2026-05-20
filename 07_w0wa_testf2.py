@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed May 20 01:57:40 2026
+
+@author: Jian Hu
+Email: dg1626002@smail.nju.edu.cn
 Extended Data Figure 3: w0waCDM robustness test.
 
 Pure CPU FP64 vectorised acceleration pipeline (LCDMCPUFP64 style):
@@ -30,7 +34,7 @@ from scipy.interpolate import RegularGridInterpolator
 
 from getdist import plots, MCSamples
 
-# 导入数据与基础常量
+# Load data and fundamental constants
 from cosmoc import (
     c_light,
     load_pantheon_plus, load_bao,
@@ -83,7 +87,7 @@ def compute_grids_3d_w0wa_cpu(z_sn, z_bao, Om_grid, w0_grid, wa_grid):
                 wa = wa_grid[k]
                 Ol = 1.0 - Om
 
-                # --- 1. 计算年龄积分 ---
+                # --- 1. Compute age integrals ---
                 age_int = 0.0
                 n_steps_age = 500
                 da = 1.0 / n_steps_age
@@ -95,7 +99,7 @@ def compute_grids_3d_w0wa_cpu(z_sn, z_bao, Om_grid, w0_grid, wa_grid):
                         age_int += 1.0 / np.sqrt(val)
                 grid_age[i, j, k] = age_int * da
 
-                # --- 2. 计算距离累积积分 ---
+                # --- 2. Compute cumulative distance integrals ---
                 cum_I = np.zeros(n_z_steps + 1, dtype=np.float64)
                 prev_val = Om + Ol
                 prev_inv = 1.0 / np.sqrt(prev_val) if prev_val > 0 else 0.0
@@ -108,7 +112,7 @@ def compute_grids_3d_w0wa_cpu(z_sn, z_bao, Om_grid, w0_grid, wa_grid):
                     cum_I[step] = cum_I[step-1] + 0.5 * (prev_inv + curr_inv) * dz
                     prev_inv = curr_inv
 
-                # --- 3. 提取 SNe 距离 ---
+                # --- 3. Extract SNe distances 距离 ---
                 for s in range(N_sn):
                     z = z_sn[s]
                     idx = int(z / dz)
@@ -116,7 +120,7 @@ def compute_grids_3d_w0wa_cpu(z_sn, z_bao, Om_grid, w0_grid, wa_grid):
                     w = (z - z_array[idx]) / dz
                     grid_sn[i, j, k, s] = cum_I[idx] * (1.0 - w) + cum_I[idx+1] * w
 
-                # --- 4. 提取 BAO 距离 ---
+                # --- 4. Extract BAO distances ---
                 for b in range(N_bao):
                     z = z_bao[b]
                     idx = int(z / dz)
@@ -129,7 +133,7 @@ def compute_grids_3d_w0wa_cpu(z_sn, z_bao, Om_grid, w0_grid, wa_grid):
 
 class GlobalCosmoDataCache:
     def __init__(self):
-        print("\n=== 初始化全局数据与 3D 积分网格 (纯 CPU FP64) ===")
+        print("\n=== Initialize global data and 3D integration grid (pure CPU FP64) ===")
         self.z_sn, self.mb_sn, self.inv_cov_sn = load_pantheon_plus()
         self.bao_data = load_bao()
 
@@ -149,12 +153,12 @@ class GlobalCosmoDataCache:
         self.w0_grid = np.linspace(-2.2, 0.2, 30, dtype=np.float64)
         self.wa_grid = np.linspace(-3.2, 2.2, 30, dtype=np.float64)
 
-        print("正在进行 3D Numba 预计算 (网格: 30x30x30)...")
+        print("Performing 3D Numba pre-computation (grid: 30x30x30)...")
         t0 = time.time()
         grid_sn, grid_bao, grid_age = compute_grids_3d_w0wa_cpu(
             self.z_sn, self.z_bao, self.Om_grid, self.w0_grid, self.wa_grid
         )
-        print(f"✅ 3D 网格预计算完成，耗时: {time.time() - t0:.2f} 秒")
+        print(f"✅ 3D grid pre-computation completed in {time.time() - t0:.2f} seconds")
 
         grid_coords = (self.Om_grid, self.w0_grid, self.wa_grid)
         self.interp_sn = RegularGridInterpolator(grid_coords, grid_sn, bounds_error=False, fill_value=None)
@@ -306,7 +310,7 @@ def main():
                        label=sc['label'], settings={'smooth_scale_1D': 0.7, 'smooth_scale_2D': 0.7})
         all_mc.append(mc)
 
-        # =============== [保存 MCMC 链] ===============
+        # =============== [Save MCMC chains] ===============
         safe_short = sc['short']
         np.savez_compressed(
             f"chain_w0wa_{safe_short}.npz",
@@ -316,9 +320,9 @@ def main():
             age_obs=sc['mu'], age_err=sc['err'],
             label=sc['label'], color=sc['color']
         )
-        print(f"  ✅ 已保存 MCMC 链至: chain_w0wa_{safe_short}.npz")
+        print(f" ✅ Saved MCMC chains to: chain_w0wa_{safe_short}.npz")
 
-    # ================= 汇总数据对比 =================
+    # ================= Summarize data comparisons =================
     # NOTE: The LCDM baseline numbers below are read from the
     # global constants at the top of this file. Update those
     # constants whenever 03_with_BAO2f.py is re-run.
@@ -364,7 +368,7 @@ def main():
         f.write(summary_text + "\n")
 
     # =====================================================
-    # 融合 10_pretty_replot.py 的美化画图 (附加参考带)
+    # Generate plots (with reference bands)
     # =====================================================
     print("\n[Plotting] Building pretty corner plot for EDFig3...")
     plot_params = ["Om", "w0", "wa", "H0", "MB", "rd"]
@@ -378,22 +382,22 @@ def main():
                     contour_colors=[s['color'] for s in SCENARIOS],
                     legend_loc='upper right')
 
-    # [高级功能]: 添加 Planck 和 SH0ES 的参考阴影带到 H0 维度
+    # Add Planck and SH0ES reference bands to the H0 panel
     PLANCK_COLOR = '#0066cc'
     SH0ES_COLOR  = '#cc0000'
     try:
-        axH0 = g.subplots[3, 3]  # H0 是 params 里的索引 3
+        axH0 = g.subplots[3, 3]  # H0 is at index 3 in params
         if axH0 is not None:
             axH0.axvspan(PLANCK_H0[0] - PLANCK_H0[1], PLANCK_H0[0] + PLANCK_H0[1],
                          color=PLANCK_COLOR, alpha=0.18, zorder=0)
             axH0.axvspan(SH0ES_H0[0] - SH0ES_H0[1], SH0ES_H0[0] + SH0ES_H0[1],
                          color=SH0ES_COLOR, alpha=0.18, zorder=0)
     except Exception as e:
-        print("⚠️ 无法添加参考阴影带:", e)
+        print("⚠️ Failed to add reference bands:", e)
 
     g.export("EDFig3_w0wa.pdf")
     plt.savefig("EDFig3_w0wa.png", dpi=200, bbox_inches='tight')
-    print("✅ 已保存完美排版的 EDFig3_w0wa.pdf / .png")
+    print("✅ Saved publication-ready EDFig3_w0wa.pdf / .png")
 
 
 if __name__ == "__main__":

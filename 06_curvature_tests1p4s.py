@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed May 20 01:55:40 2026
+
+@author: Jian Hu
+Email: dg1626002@smail.nju.edu.cn
+
 ED Fig. 2 — Three-scenario overlay (non-flat LambdaCDM robustness)
 
 Runs the curvature-test MCMC for all three age scenarios and overlays
@@ -11,143 +16,6 @@ Output
 - Console: full 6-parameter posterior for each scenario + convergence
 - EDFig2_Curvature_AllScenarios.pdf
 - EDFig2_Curvature_AllScenarios_summary.txt   (machine-readable)
-
-
-%runfile F:/work/code/age/newtest01/06_curvature_tests1p4.py --wdir
-Reloaded modules: cosmoc, cosmo_tools
-============================================================
-Non-flat ΛCDM robustness — three age scenarios overlaid
-Pantheon+ + age + DESI Y1 BAO, free Ω_k
-============================================================
-
-[Step 1] Loading shared data...
-  Pantheon+ loaded: 1580 SNe (removed 121: 77 calibrators + 44 low-z)
-  DESI BAO loaded: 13 points
-  Precomputing (Om, Ok) grid (200 x 200)...
-  Grid built in 1.07 s
-  Shared data ready.
-
-[Step 2] Running MCMC for three scenarios...
-
-============================================================
-Scenario: $t_0 = 14.2 \pm 0.4$ Gyr  (HD 140283)  (t = 14.2 ± 0.4 Gyr)
-============================================================
-100%|██████████| 10000/10000 [00:21<00:00, 474.83it/s]
-  MCMC done in 21.1 s
-
-  --- 6-parameter posterior (median + 68% CI) ---
-    Om       = 0.2932  +0.0116 / -0.0114
-    Ok       = 0.0480  +0.0371 / -0.0361
-    H0       = 65.3903  +1.9131 / -1.5922
-    MB       = -19.5040  +0.0619 / -0.0526
-    rd       = 153.8266  +3.6053 / -4.2590
-    dt_form  = 0.1488  +0.0495 / -0.0493
-  τ_max = 89.8,  chain/τ = 111.4
-  N_eff median = 1898,  N_eff min = 1671
-  Acceptance fraction = 0.499
-
-============================================================
-Scenario: $t_0 = 13.5 \pm 0.27$ Gyr  (Globular Clusters)  (t = 13.5 ± 0.27 Gyr)
-============================================================
-100%|██████████| 10000/10000 [00:21<00:00, 468.39it/s]
-  MCMC done in 21.4 s
-
-  --- 6-parameter posterior (median + 68% CI) ---
-    Om       = 0.2933  +0.0114 / -0.0112
-    Ok       = 0.0484  +0.0367 / -0.0359
-    H0       = 68.4445  +1.5223 / -1.4574
-    MB       = -19.4044  +0.0464 / -0.0458
-    rd       = 146.8788  +2.9865 / -2.9600
-    dt_form  = 0.1493  +0.0494 / -0.0489
-  τ_max = 68.6,  chain/τ = 145.8
-  N_eff median = 2204,  N_eff min = 2186
-  Acceptance fraction = 0.512
-
-============================================================
-Scenario: $t_0 = 12.6 \pm 0.27$ Gyr  (SH0ES Implied)  (t = 12.6 ± 0.27 Gyr)
-============================================================
-100%|██████████| 10000/10000 [00:21<00:00, 473.19it/s]
-  MCMC done in 21.1 s
-
-  --- 6-parameter posterior (median + 68% CI) ---
-    Om       = 0.2932  +0.0115 / -0.0115
-    Ok       = 0.0488  +0.0371 / -0.0364
-    H0       = 73.2756  +1.7005 / -1.6414
-    MB       = -19.2567  +0.0490 / -0.0479
-    rd       = 137.2175  +2.9364 / -2.9722
-    dt_form  = 0.1494  +0.0496 / -0.0499
-  τ_max = 95.9,  chain/τ = 104.3
-  N_eff median = 1909,  N_eff min = 1564
-  Acceptance fraction = 0.512
-
-========================================================================
-TENSION ANALYSIS
-========================================================================
-  [HD140283]
-    H₀  = 65.39 ± 1.91   (vs Planck 1.02σ, vs SH0ES 3.51σ)
-    M_B = -19.504 ± 0.062   (vs SH0ES M_B 3.72σ)
-    r_d = 153.83 ± 4.26   (vs BBN 1.62σ)
-  [GC]
-    H₀  = 68.44 ± 1.52   (vs Planck 0.65σ, vs SH0ES 2.49σ)
-    M_B = -19.404 ± 0.046   (vs SH0ES M_B 2.82σ)
-    r_d = 146.88 ± 2.99   (vs BBN 0.03σ)
-  [SH0ES]
-    H₀  = 73.28 ± 1.70   (vs Planck 3.31σ, vs SH0ES 0.12σ)
-    M_B = -19.257 ± 0.049   (vs SH0ES M_B 0.07σ)
-    r_d = 137.22 ± 2.97   (vs BBN 3.11σ)
-
-Wrote: EDFig2_Curvature_AllScenarios_summary.txt
-
-[Step 3] Per-scenario stats (5 physical params, no dt_form)...
-
---- HD140283 ---
-
-========================================================
-MCMC constraints (median and +upper / -lower)
-========================================================
-\Omega_m   = 0.2932  +0.0116  -0.0114
-\Omega_k   = 0.0480  +0.0371  -0.0361
-H_0        = 65.3903  +1.9131  -1.5922
-M_B        = -19.5040  +0.0619  -0.0526
-r_d        = 153.8266  +3.6053  -4.2590
-========================================================
-
-
---- GC ---
-
-========================================================
-MCMC constraints (median and +upper / -lower)
-========================================================
-\Omega_m   = 0.2933  +0.0114  -0.0112
-\Omega_k   = 0.0484  +0.0367  -0.0359
-H_0        = 68.4445  +1.5223  -1.4574
-M_B        = -19.4044  +0.0464  -0.0458
-r_d        = 146.8788  +2.9865  -2.9600
-========================================================
-
-
---- SH0ES ---
-
-========================================================
-MCMC constraints (median and +upper / -lower)
-========================================================
-\Omega_m   = 0.2932  +0.0115  -0.0115
-\Omega_k   = 0.0488  +0.0371  -0.0364
-H_0        = 73.2756  +1.7005  -1.6414
-M_B        = -19.2567  +0.0490  -0.0479
-r_d        = 137.2175  +2.9364  -2.9722
-========================================================
-
-
-[Step 4] Building overlay corner plot...
-Removed no burn in
-Removed no burn in
-Removed no burn in
-✅ Comparison plot saved: EDFig2_Curvature_AllScenarios.pdf
-
-============================================================
-All done.
-============================================================
 """
 
 import os
@@ -392,7 +260,6 @@ class LikelihoodNonFlatVectorizedCPU:
 # =====================================================================
 # Run one scenario
 # =====================================================================
-# (此处省略文件头部，直接看 run_one 函数的修改)
 def run_one(age_obs, age_err, label, n_steps=10000, n_burnin=2500,
             nwalkers=40, ndim=6, seed=None):
     if seed is not None:
