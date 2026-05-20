@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 cosmo_tools.py
+@author: Jian Hu
+Email: dg1626002@smail.nju.edu.cn
 --------------
 A small, dependency-light cosmology MCMC post-processing toolbox.
+
 
 Design goals
 - Stable API for scripts like `nature_solver_curvature.py`

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 """
+@author: Jian Hu
+Email: dg1626002@smail.nju.edu.cn
 Shared physics / data-loading utilities.
 
 All analysis scripts import from this module to avoid code duplication
