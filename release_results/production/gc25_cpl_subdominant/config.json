@@ -1,0 +1,17 @@
+{
+  "name": "gc25_cpl_subdominant",
+  "model": "cpl",
+  "bao": true,
+  "age": {
+    "mode": "stellar_zform",
+    "stellar_mu": 13.39,
+    "stellar_sigma": 0.25079872407968906,
+    "zform_range": [
+      11.0,
+      30.0
+    ],
+    "zform_prior": "uniform_z"
+  },
+  "seed": 2026111302,
+  "early_subdominant": true
+}

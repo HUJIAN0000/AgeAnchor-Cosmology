@@ -1,0 +1,880 @@
+{
+  "basetools_sha256": "0a7937c3e88350b49d3344f70e546c9a24b9993696b980cc1a515fbcf616cb9e",
+  "all_triangles_use_specified_tool": true,
+  "additional_MCMC_configurations": 4,
+  "reference_calibration": "GC25",
+  "alternative_calibration": "GC26",
+  "figures": [
+    {
+      "figure": "flat_joint",
+      "renderer": "UNMODIFIED basetools/cosmo_tools.py / GetDist",
+      "cases": [
+        "gc25_flat",
+        "gc26_flat"
+      ],
+      "sources": {
+        "gc25_flat": {
+          "folder": "fresh_results/production/gc25_flat",
+          "posterior_sha256": "a19433403e3beec038fcdd369982702ec6f82bc3756bd055e85dd184d1ea2e97",
+          "sampling_batch": "principal"
+        },
+        "gc26_flat": {
+          "folder": "fresh_results/production/gc26_flat",
+          "posterior_sha256": "782db0cdbccbb8f08c7d5fc1efce5a5fcedeb34cf32a658458f74b5df4e5e51f",
+          "sampling_batch": "principal"
+        }
+      },
+      "parameters": [
+        "Om",
+        "H0",
+        "MB",
+        "rd"
+      ],
+      "contours": [
+        0.68,
+        0.95
+      ],
+      "diagonal_intervals": [
+        0.68,
+        0.95
+      ],
+      "array_sizes": [
+        60000,
+        60000
+      ],
+      "sample_filtering": "none",
+      "parameter_ranges": [
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            45,
+            100
+          ],
+          "p3": [
+            80,
+            220
+          ]
+        },
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            45,
+            100
+          ],
+          "p3": [
+            80,
+            220
+          ]
+        }
+      ],
+      "numeric_titles": false,
+      "smoothing_1d": 0.45,
+      "smoothing_2d": 0.65
+    },
+    {
+      "figure": "curved_joint",
+      "renderer": "UNMODIFIED basetools/cosmo_tools.py / GetDist",
+      "cases": [
+        "gc25_curved",
+        "gc26_curved"
+      ],
+      "sources": {
+        "gc25_curved": {
+          "folder": "fresh_results/production/gc25_curved",
+          "posterior_sha256": "801cb328ca89df3ac90518581c87ca46bf4bb0d2cbfee5d8ccfe8580b5065cce",
+          "sampling_batch": "principal"
+        },
+        "gc26_curved": {
+          "folder": "fresh_results/production/gc26_curved",
+          "posterior_sha256": "54931ea86f9e001c74d9c1f66d588381f000ae611fe89e952f9f620f7ff9c4e7",
+          "sampling_batch": "principal"
+        }
+      },
+      "parameters": [
+        "Om",
+        "Ok",
+        "H0",
+        "MB",
+        "rd"
+      ],
+      "contours": [
+        0.68,
+        0.95
+      ],
+      "diagonal_intervals": [
+        0.68,
+        0.95
+      ],
+      "array_sizes": [
+        60000,
+        60000
+      ],
+      "sample_filtering": "none",
+      "parameter_ranges": [
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            -0.5,
+            0.5
+          ],
+          "p2": [
+            45,
+            100
+          ],
+          "p4": [
+            80,
+            220
+          ]
+        },
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            -0.5,
+            0.5
+          ],
+          "p2": [
+            45,
+            100
+          ],
+          "p4": [
+            80,
+            220
+          ]
+        }
+      ],
+      "numeric_titles": false,
+      "smoothing_1d": 0.45,
+      "smoothing_2d": 0.65
+    },
+    {
+      "figure": "cpl_joint",
+      "renderer": "UNMODIFIED basetools/cosmo_tools.py / GetDist",
+      "cases": [
+        "gc25_cpl",
+        "gc26_cpl"
+      ],
+      "sources": {
+        "gc25_cpl": {
+          "folder": "fresh_results/production/gc25_cpl",
+          "posterior_sha256": "a803a76ab4ace0351105320eb69fe661ef6a71514e52eed27da40c8b6a0112e3",
+          "sampling_batch": "principal"
+        },
+        "gc26_cpl": {
+          "folder": "fresh_results/production/gc26_cpl",
+          "posterior_sha256": "91599c55d3a71d2a5c35565feca1362113974dcab17486616834498797b7c869",
+          "sampling_batch": "principal"
+        }
+      },
+      "parameters": [
+        "Om",
+        "H0",
+        "MB",
+        "rd",
+        "w0",
+        "wa"
+      ],
+      "contours": [
+        0.68,
+        0.95
+      ],
+      "diagonal_intervals": [
+        0.68,
+        0.95
+      ],
+      "array_sizes": [
+        60000,
+        60000
+      ],
+      "sample_filtering": "none",
+      "parameter_ranges": [
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            45,
+            100
+          ],
+          "p3": [
+            80,
+            220
+          ],
+          "p4": [
+            -2,
+            0
+          ],
+          "p5": [
+            -3,
+            2
+          ]
+        },
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            45,
+            100
+          ],
+          "p3": [
+            80,
+            220
+          ],
+          "p4": [
+            -2,
+            0
+          ],
+          "p5": [
+            -3,
+            2
+          ]
+        }
+      ],
+      "numeric_titles": false,
+      "smoothing_1d": 0.45,
+      "smoothing_2d": 0.65
+    },
+    {
+      "figure": "age_information_cpl",
+      "renderer": "UNMODIFIED basetools/cosmo_tools.py / GetDist",
+      "cases": [
+        "gc25_cpl",
+        "noage_cpl"
+      ],
+      "sources": {
+        "gc25_cpl": {
+          "folder": "fresh_results/production/gc25_cpl",
+          "posterior_sha256": "a803a76ab4ace0351105320eb69fe661ef6a71514e52eed27da40c8b6a0112e3",
+          "sampling_batch": "principal"
+        },
+        "noage_cpl": {
+          "folder": "fresh_results/production/noage_cpl",
+          "posterior_sha256": "cb92ca65620b26e5f1df2af5276fb4a67cc8e936b51d21e51378b45ed7542ad0",
+          "sampling_batch": "principal"
+        }
+      },
+      "parameters": [
+        "Om",
+        "H0",
+        "MB",
+        "rd",
+        "w0",
+        "wa"
+      ],
+      "contours": [
+        0.68,
+        0.95
+      ],
+      "diagonal_intervals": [
+        0.68,
+        0.95
+      ],
+      "array_sizes": [
+        60000,
+        60000
+      ],
+      "sample_filtering": "none",
+      "parameter_ranges": [
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            45,
+            100
+          ],
+          "p3": [
+            80,
+            220
+          ],
+          "p4": [
+            -2,
+            0
+          ],
+          "p5": [
+            -3,
+            2
+          ]
+        },
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            45,
+            100
+          ],
+          "p3": [
+            80,
+            220
+          ],
+          "p4": [
+            -2,
+            0
+          ],
+          "p5": [
+            -3,
+            2
+          ]
+        }
+      ],
+      "numeric_titles": false,
+      "smoothing_1d": 0.45,
+      "smoothing_2d": 0.65
+    },
+    {
+      "figure": "cpl_priors",
+      "renderer": "UNMODIFIED basetools/cosmo_tools.py / GetDist",
+      "cases": [
+        "gc25_cpl",
+        "gc25_cpl_Om025",
+        "gc25_cpl_subdominant"
+      ],
+      "sources": {
+        "gc25_cpl": {
+          "folder": "fresh_results/production/gc25_cpl",
+          "posterior_sha256": "a803a76ab4ace0351105320eb69fe661ef6a71514e52eed27da40c8b6a0112e3",
+          "sampling_batch": "principal"
+        },
+        "gc25_cpl_Om025": {
+          "folder": "release_results/production/gc25_cpl_Om025",
+          "posterior_sha256": "c2d99e9a16930c371db1e90cf7ed7dc3b1b17fc68ea559ca86e9838cd3861c7f",
+          "sampling_batch": "gc25_cpl_followup"
+        },
+        "gc25_cpl_subdominant": {
+          "folder": "release_results/production/gc25_cpl_subdominant",
+          "posterior_sha256": "f965f2957df1ee89ced259d2b17393a6c5394add146945dc85e833b80214617b",
+          "sampling_batch": "gc25_cpl_followup"
+        }
+      },
+      "parameters": [
+        "Om",
+        "w0",
+        "wa"
+      ],
+      "contours": [
+        0.68,
+        0.95
+      ],
+      "diagonal_intervals": [
+        0.68,
+        0.95
+      ],
+      "array_sizes": [
+        60000,
+        60000,
+        60000
+      ],
+      "sample_filtering": "none",
+      "parameter_ranges": [
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            -2,
+            0
+          ],
+          "p2": [
+            -3,
+            2
+          ]
+        },
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            -2,
+            0
+          ],
+          "p2": [
+            -3,
+            2
+          ]
+        },
+        {
+          "p0": [
+            0.1,
+            0.6
+          ],
+          "p1": [
+            -2,
+            0
+          ],
+          "p2": [
+            -3,
+            2
+          ]
+        }
+      ],
+      "numeric_titles": false,
+      "smoothing_1d": 0.45,
+      "smoothing_2d": 0.65
+    },
+    {
+      "figure": "model_comparison",
+      "renderer": "Matplotlib; frozen posterior intervals",
+      "cases": [
+        "gc25_no_bao",
+        "gc26_no_bao",
+        "gc25_flat",
+        "gc26_flat",
+        "gc25_curved",
+        "gc26_curved",
+        "gc25_cpl",
+        "gc26_cpl"
+      ],
+      "sources": {
+        "gc25_no_bao": {
+          "folder": "fresh_results/production/gc25_no_bao",
+          "posterior_sha256": "d2ec6eefc61efad29d56293c992c92af2b62594baf1abeb6c3b28763b87a8c19",
+          "sampling_batch": "principal"
+        },
+        "gc26_no_bao": {
+          "folder": "fresh_results/production/gc26_no_bao",
+          "posterior_sha256": "85e81f9f99d5533a831d7ea4bae31349ffde9c23cb3310b72e5fbf128aa5565b",
+          "sampling_batch": "principal"
+        },
+        "gc25_flat": {
+          "folder": "fresh_results/production/gc25_flat",
+          "posterior_sha256": "a19433403e3beec038fcdd369982702ec6f82bc3756bd055e85dd184d1ea2e97",
+          "sampling_batch": "principal"
+        },
+        "gc26_flat": {
+          "folder": "fresh_results/production/gc26_flat",
+          "posterior_sha256": "782db0cdbccbb8f08c7d5fc1efce5a5fcedeb34cf32a658458f74b5df4e5e51f",
+          "sampling_batch": "principal"
+        },
+        "gc25_curved": {
+          "folder": "fresh_results/production/gc25_curved",
+          "posterior_sha256": "801cb328ca89df3ac90518581c87ca46bf4bb0d2cbfee5d8ccfe8580b5065cce",
+          "sampling_batch": "principal"
+        },
+        "gc26_curved": {
+          "folder": "fresh_results/production/gc26_curved",
+          "posterior_sha256": "54931ea86f9e001c74d9c1f66d588381f000ae611fe89e952f9f620f7ff9c4e7",
+          "sampling_batch": "principal"
+        },
+        "gc25_cpl": {
+          "folder": "fresh_results/production/gc25_cpl",
+          "posterior_sha256": "a803a76ab4ace0351105320eb69fe661ef6a71514e52eed27da40c8b6a0112e3",
+          "sampling_batch": "principal"
+        },
+        "gc26_cpl": {
+          "folder": "fresh_results/production/gc26_cpl",
+          "posterior_sha256": "91599c55d3a71d2a5c35565feca1362113974dcab17486616834498797b7c869",
+          "sampling_batch": "principal"
+        }
+      }
+    },
+    {
+      "figure": "formation_sensitivity",
+      "renderer": "Matplotlib; frozen posterior intervals",
+      "cases": [
+        "stellar_zform_bao",
+        "stellar_zform_bao_zmax50",
+        "stellar_zform_bao_zmin6",
+        "stellar_zform_bao_logprior",
+        "gc2026_bao",
+        "gc2026_bao_zmax50",
+        "gc2026_bao_zmin6",
+        "gc2026_bao_logprior"
+      ],
+      "sources": {
+        "stellar_zform_bao": {
+          "folder": "fresh_results/production/gc25_flat",
+          "posterior_sha256": "a19433403e3beec038fcdd369982702ec6f82bc3756bd055e85dd184d1ea2e97",
+          "sampling_batch": "principal"
+        },
+        "stellar_zform_bao_zmax50": {
+          "folder": "reanalysis/runs/stellar_zform_bao_zmax50",
+          "posterior_sha256": "2902e0aac91e3a00e2cb2773aa8642bd411e4d85602e328f8d88bc4c1e990e2e",
+          "sampling_batch": "supplementary"
+        },
+        "stellar_zform_bao_zmin6": {
+          "folder": "reanalysis/runs/stellar_zform_bao_zmin6",
+          "posterior_sha256": "d76d8f882c8c3681513fbb3a331c4820dca9779188b753b5fadb163486041ea1",
+          "sampling_batch": "supplementary"
+        },
+        "stellar_zform_bao_logprior": {
+          "folder": "reanalysis/runs/stellar_zform_bao_logprior",
+          "posterior_sha256": "9fb9d99f2a252a8d5202c9c2d6ba632d70fb246ffad4c7575b36b68d1ff85a59",
+          "sampling_batch": "supplementary"
+        },
+        "gc2026_bao": {
+          "folder": "fresh_results/production/gc26_flat",
+          "posterior_sha256": "782db0cdbccbb8f08c7d5fc1efce5a5fcedeb34cf32a658458f74b5df4e5e51f",
+          "sampling_batch": "principal"
+        },
+        "gc2026_bao_zmax50": {
+          "folder": "fresh_results/production/earlyform_flat",
+          "posterior_sha256": "0a8afce08130d112968f52a1dc66b0eb9a067cc383566f41353beb13f6bdd5db",
+          "sampling_batch": "principal"
+        },
+        "gc2026_bao_zmin6": {
+          "folder": "fresh_results/production/lateform_flat",
+          "posterior_sha256": "1df5b5e5778f4466428ef633707035157fd8c046f1da3dd2580e5c0a8dcb07cf",
+          "sampling_batch": "principal"
+        },
+        "gc2026_bao_logprior": {
+          "folder": "reanalysis/runs/gc2026_bao_logprior",
+          "posterior_sha256": "23e98435df48373bd6f867e6f3929e73124587bfb35c0c516e2f19449c4cafb1",
+          "sampling_batch": "supplementary"
+        }
+      }
+    },
+    {
+      "figure": "scale_information",
+      "renderer": "Matplotlib; frozen posterior intervals",
+      "cases": [
+        "noage_flat",
+        "gc25_flat",
+        "gc26_flat",
+        "noage_curved",
+        "gc25_curved",
+        "gc26_curved",
+        "noage_cpl",
+        "gc25_cpl",
+        "gc26_cpl"
+      ],
+      "sources": {
+        "noage_flat": {
+          "folder": "fresh_results/production/noage_flat",
+          "posterior_sha256": "b4884afcc5675f0a6a7cc43b5e5c41e6fd1a46030a6a37a898b504eb67eeb321",
+          "sampling_batch": "principal"
+        },
+        "gc25_flat": {
+          "folder": "fresh_results/production/gc25_flat",
+          "posterior_sha256": "a19433403e3beec038fcdd369982702ec6f82bc3756bd055e85dd184d1ea2e97",
+          "sampling_batch": "principal"
+        },
+        "gc26_flat": {
+          "folder": "fresh_results/production/gc26_flat",
+          "posterior_sha256": "782db0cdbccbb8f08c7d5fc1efce5a5fcedeb34cf32a658458f74b5df4e5e51f",
+          "sampling_batch": "principal"
+        },
+        "noage_curved": {
+          "folder": "fresh_results/production/noage_curved",
+          "posterior_sha256": "47127e226ef6f707566b3fc4cd601859179565ec1ec123bb990521029edeea25",
+          "sampling_batch": "principal"
+        },
+        "gc25_curved": {
+          "folder": "fresh_results/production/gc25_curved",
+          "posterior_sha256": "801cb328ca89df3ac90518581c87ca46bf4bb0d2cbfee5d8ccfe8580b5065cce",
+          "sampling_batch": "principal"
+        },
+        "gc26_curved": {
+          "folder": "fresh_results/production/gc26_curved",
+          "posterior_sha256": "54931ea86f9e001c74d9c1f66d588381f000ae611fe89e952f9f620f7ff9c4e7",
+          "sampling_batch": "principal"
+        },
+        "noage_cpl": {
+          "folder": "fresh_results/production/noage_cpl",
+          "posterior_sha256": "cb92ca65620b26e5f1df2af5276fb4a67cc8e936b51d21e51378b45ed7542ad0",
+          "sampling_batch": "principal"
+        },
+        "gc25_cpl": {
+          "folder": "fresh_results/production/gc25_cpl",
+          "posterior_sha256": "a803a76ab4ace0351105320eb69fe661ef6a71514e52eed27da40c8b6a0112e3",
+          "sampling_batch": "principal"
+        },
+        "gc26_cpl": {
+          "folder": "fresh_results/production/gc26_cpl",
+          "posterior_sha256": "91599c55d3a71d2a5c35565feca1362113974dcab17486616834498797b7c869",
+          "sampling_batch": "principal"
+        }
+      }
+    },
+    {
+      "figure": "age_width",
+      "renderer": "Matplotlib uncertainty scenarios",
+      "cases": [
+        "stellar_zform_no_bao",
+        "stellar_zform_sigma_0.40",
+        "stellar_zform_sigma_0.50",
+        "stellar_zform_sigma_0.70",
+        "gc2026_no_bao",
+        "gc2026_sigma_0.40",
+        "gc2026_sigma_0.50",
+        "gc2026_sigma_0.70"
+      ],
+      "sources": {
+        "stellar_zform_no_bao": {
+          "folder": "fresh_results/production/gc25_no_bao",
+          "posterior_sha256": "d2ec6eefc61efad29d56293c992c92af2b62594baf1abeb6c3b28763b87a8c19",
+          "sampling_batch": "principal"
+        },
+        "stellar_zform_sigma_0.40": {
+          "folder": "reanalysis/runs/stellar_zform_sigma_0.40",
+          "posterior_sha256": "09f961e438bbe32073ef844c72672aef3272e3895e5ccc29e3fa788aa61dbbcd",
+          "sampling_batch": "supplementary"
+        },
+        "stellar_zform_sigma_0.50": {
+          "folder": "reanalysis/runs/stellar_zform_sigma_0.50",
+          "posterior_sha256": "580e7b9f4a7b1531f5720ea6b097ca0d05907b250b8631cd5606537dd0d25be3",
+          "sampling_batch": "supplementary"
+        },
+        "stellar_zform_sigma_0.70": {
+          "folder": "reanalysis/runs/stellar_zform_sigma_0.70",
+          "posterior_sha256": "c90eca9b114cf5ac0771b0f7ccc10784558c04760d416382a491f843f95626cb",
+          "sampling_batch": "supplementary"
+        },
+        "gc2026_no_bao": {
+          "folder": "fresh_results/production/gc26_no_bao",
+          "posterior_sha256": "85e81f9f99d5533a831d7ea4bae31349ffde9c23cb3310b72e5fbf128aa5565b",
+          "sampling_batch": "principal"
+        },
+        "gc2026_sigma_0.40": {
+          "folder": "reanalysis/runs/gc2026_sigma_0.40",
+          "posterior_sha256": "22a0e5905ec45074d99a261fa60a147c4e56e1edf9dd80a15e23817226218c60",
+          "sampling_batch": "supplementary"
+        },
+        "gc2026_sigma_0.50": {
+          "folder": "reanalysis/runs/gc2026_sigma_0.50",
+          "posterior_sha256": "4c6935db076169fae65248c21c5e788f0899b99c62c2f77abbc3beae55a6e695",
+          "sampling_batch": "supplementary"
+        },
+        "gc2026_sigma_0.70": {
+          "folder": "reanalysis/runs/gc2026_sigma_0.70",
+          "posterior_sha256": "69dc95ce9bb5df9a1b73a90e95747dca9fb20cff46e12fc0238540aceee91a35",
+          "sampling_batch": "supplementary"
+        }
+      }
+    },
+    {
+      "figure": "fixed_delay_scan",
+      "renderer": "Matplotlib fixed-delay sensitivity",
+      "cases": [
+        "fixed_delay_gc25_0p00",
+        "fixed_delay_gc25_0p05",
+        "fixed_delay_gc25_0p10",
+        "fixed_delay_gc25_0p15",
+        "fixed_delay_gc25_0p20",
+        "fixed_delay_gc25_0p25",
+        "fixed_delay_gc25_0p30",
+        "fixed_delay_gc25_0p35",
+        "fixed_delay_gc25_0p40",
+        "fixed_delay_gc25_0p45",
+        "fixed_delay_gc25_0p50",
+        "fixed_delay_gc25_0p55",
+        "fixed_delay_gc25_0p60",
+        "fixed_delay_gc26_0p00",
+        "fixed_delay_gc26_0p05",
+        "fixed_delay_gc26_0p10",
+        "fixed_delay_gc26_0p15",
+        "fixed_delay_gc26_0p20",
+        "fixed_delay_gc26_0p25",
+        "fixed_delay_gc26_0p30",
+        "fixed_delay_gc26_0p35",
+        "fixed_delay_gc26_0p40",
+        "fixed_delay_gc26_0p45",
+        "fixed_delay_gc26_0p50",
+        "fixed_delay_gc26_0p55",
+        "fixed_delay_gc26_0p60",
+        "stellar_zform_no_bao",
+        "gc2026_no_bao"
+      ],
+      "sources": {
+        "fixed_delay_gc25_0p00": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p00",
+          "posterior_sha256": "41f57d48426c80bdf3939319e958dc4158cf02f635437c2eb2ef59263f02b7ec",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p05": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p05",
+          "posterior_sha256": "b59a663f5539ee6bb0df9b1f4be846521942ef8cb22456cc88fa1ce1043ffa3d",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p10": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p10",
+          "posterior_sha256": "e61f8c7897ccd9095ad1019c829ee3a67107cde07f5d0bb59ab53c0411a5f684",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p15": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p15",
+          "posterior_sha256": "67ca92006207b5f4275cb31703be3ae8dcb1fe557e75cafe1703e42a45427969",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p20": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p20",
+          "posterior_sha256": "89c15ffcee7e5fffa51db5b29e75e6757d81912c5fb6e5d9942df6e053584040",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p25": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p25",
+          "posterior_sha256": "02929db20788a361cb9d6eb67e9148d4fc99cf2c01d7e04f53c13d316dd9ceaf",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p30": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p30",
+          "posterior_sha256": "f9afa9d9cde2b39ed9e76caf38f3e6457e8e83b7b1fac8cc0306503e9ed3be02",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p35": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p35",
+          "posterior_sha256": "3a0ac04870091fad0d7c969f8e297669c02795fe2109ba803e1ebe898221988e",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p40": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p40",
+          "posterior_sha256": "66bf38d0d2f35c6c1a90ffe4dee2d53dce9cf50259f16398bad2c206161d291a",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p45": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p45",
+          "posterior_sha256": "cf76325ba0587b783b7c77384a0701fec9f8223aba23958683da5bee1ce9c91d",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p50": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p50",
+          "posterior_sha256": "8c0e4a2cc9317a80087919d8e1c018b563ee11480855f10e234b7f89ba07cc92",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p55": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p55",
+          "posterior_sha256": "6aea0c7cf4b30b059961dad7a6821041eae579f93e14294fcbadaa2eb440f2b4",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc25_0p60": {
+          "folder": "reanalysis/runs/fixed_delay_gc25_0p60",
+          "posterior_sha256": "1e5d49543cb8b70369cd90050af97567922bf83513b6aabef91afe33b72d8494",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p00": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p00",
+          "posterior_sha256": "ab895702801e2f06e5eac77523f0d5fedefc076e95a69f61a23a158483a1c624",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p05": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p05",
+          "posterior_sha256": "1e3bfd32296efaae464fc5733ec2e15aa40fa25bb807d94f30beb3677344605b",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p10": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p10",
+          "posterior_sha256": "418c32650df716eed029f8d24b1a56fff254e8d0a7a9edc88d860c5ff60fa522",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p15": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p15",
+          "posterior_sha256": "6ecfd8a8a66e592ba9b676ae3b4e418c8d0b949c960e50b80d125fb9bbde852e",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p20": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p20",
+          "posterior_sha256": "465f9392f738bbed3989110c317ca131bb29bfb6c0e55030dda45c5caba31454",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p25": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p25",
+          "posterior_sha256": "950f8e1230cf5b931795eacfa82f7761f34f79dc66a3e1e83c3485f8964f7c4b",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p30": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p30",
+          "posterior_sha256": "255bc408d2fdd33d475a486665b12a6e0f7dad3a42077a0fe4d8763869d234d7",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p35": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p35",
+          "posterior_sha256": "32cc966b157405f171d9e45754f9ccaa170aac109a0b447ab3d9ca4e0aaeff7d",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p40": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p40",
+          "posterior_sha256": "c8740ac4b5ba3716587d77e1478f1a9f5d7fe6c22691812bb9776f0a261c5eb1",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p45": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p45",
+          "posterior_sha256": "46b9e1e1324402bcd3bd98c541206f5951800eb82c1670bb0e8f5652c86a5c27",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p50": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p50",
+          "posterior_sha256": "fb715f2adec240c54dd63b23e28131e48fbfb7a403cd1103f4d69d0b351a6e10",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p55": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p55",
+          "posterior_sha256": "027b1896bc3d699f1baf245093dad5f18301a8fd41102d2ce938f0316c1b29d2",
+          "sampling_batch": "supplementary"
+        },
+        "fixed_delay_gc26_0p60": {
+          "folder": "reanalysis/runs/fixed_delay_gc26_0p60",
+          "posterior_sha256": "00a0b694d7314f8c74191dbb218ce84673813522164ea23bcf3cc248950ab2c3",
+          "sampling_batch": "supplementary"
+        },
+        "stellar_zform_no_bao": {
+          "folder": "fresh_results/production/gc25_no_bao",
+          "posterior_sha256": "d2ec6eefc61efad29d56293c992c92af2b62594baf1abeb6c3b28763b87a8c19",
+          "sampling_batch": "principal"
+        },
+        "gc2026_no_bao": {
+          "folder": "fresh_results/production/gc26_no_bao",
+          "posterior_sha256": "85e81f9f99d5533a831d7ea4bae31349ffde9c23cb3310b72e5fbf128aa5565b",
+          "sampling_batch": "principal"
+        }
+      }
+    },
+    {
+      "figure": "residuals",
+      "renderer": "Full-covariance residuals at GC25 optimized parameters",
+      "cases": [
+        "gc25_flat"
+      ],
+      "sources": {
+        "gc25_flat": {
+          "folder": "fresh_results/production/gc25_flat",
+          "posterior_sha256": "a19433403e3beec038fcdd369982702ec6f82bc3756bd055e85dd184d1ea2e97",
+          "sampling_batch": "principal"
+        }
+      }
+    },
+    {
+      "figure": "age_bound",
+      "renderer": "one-sided age posterior comparison",
+      "cases": [
+        "gc_stellar_lower_bound",
+        "gc_stellar_lower_bound_H0min50",
+        "stellar_zform_no_bao"
+      ],
+      "sources": {
+        "gc_stellar_lower_bound": {
+          "folder": "reanalysis/runs/gc_stellar_lower_bound",
+          "posterior_sha256": "b2896322c1a1dbd7da36c7ff42d76badaa47932bbfab2923aa6d81df66602f50",
+          "sampling_batch": "supplementary"
+        },
+        "gc_stellar_lower_bound_H0min50": {
+          "folder": "reanalysis/runs/gc_stellar_lower_bound_H0min50",
+          "posterior_sha256": "0933df41dc1a8a3967c07d78ceb12431f24e675ceb6b2e3b1ce99c853adac717",
+          "sampling_batch": "supplementary"
+        },
+        "stellar_zform_no_bao": {
+          "folder": "fresh_results/production/gc25_no_bao",
+          "posterior_sha256": "d2ec6eefc61efad29d56293c992c92af2b62594baf1abeb6c3b28763b87a8c19",
+          "sampling_batch": "principal"
+        }
+      }
+    }
+  ]
+}

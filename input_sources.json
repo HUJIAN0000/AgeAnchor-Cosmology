@@ -1,0 +1,34 @@
+[
+  {
+    "file": "Pantheon+SH0ES.dat",
+    "repository": "PantheonPlusSH0ES/DataRelease",
+    "commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+    "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+    "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+    "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8"
+  },
+  {
+    "file": "Pantheon+SH0ES_STAT+SYS.cov",
+    "repository": "PantheonPlusSH0ES/DataRelease",
+    "commit": "c447f0fea703fcd0fff57de5000947b5ca81286b",
+    "path": "Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+    "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+    "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc"
+  },
+  {
+    "file": "desi_gaussian_bao_ALL_GCcomb_cov.txt",
+    "repository": "CobayaSampler/bao_data",
+    "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+    "path": "desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+    "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+    "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  {
+    "file": "desi_gaussian_bao_ALL_GCcomb_mean.txt",
+    "repository": "CobayaSampler/bao_data",
+    "commit": "bb0c1c9009dc76d1391300e169e8df38fd1096db",
+    "path": "desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+    "url": "https://raw.githubusercontent.com/CobayaSampler/bao_data/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+    "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585"
+  }
+]

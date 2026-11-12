@@ -1,0 +1,108 @@
+{
+  "records": [
+    {
+      "model": "flat",
+      "physical_at_H0_70": [
+        0.30133374041707045,
+        70.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "scale_marginal_age_factor": 0.06260452178990278
+    },
+    {
+      "model": "flat",
+      "physical_at_H0_70": [
+        0.27104943185706226,
+        70.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "scale_marginal_age_factor": 0.0626045217899029
+    },
+    {
+      "model": "flat",
+      "physical_at_H0_70": [
+        0.343170823572961,
+        70.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "scale_marginal_age_factor": 0.06260452178990253
+    },
+    {
+      "model": "curved",
+      "physical_at_H0_70": [
+        0.29593997488237134,
+        70.0,
+        0.025840259844200866,
+        -1.0,
+        0.0
+      ],
+      "scale_marginal_age_factor": 0.06260452178990275
+    },
+    {
+      "model": "curved",
+      "physical_at_H0_70": [
+        0.24462466679440528,
+        70.0,
+        0.14818321397519535,
+        -1.0,
+        0.0
+      ],
+      "scale_marginal_age_factor": 0.06260452178990283
+    },
+    {
+      "model": "curved",
+      "physical_at_H0_70": [
+        0.34296483416139284,
+        70.0,
+        -0.03874173207201286,
+        -1.0,
+        0.0
+      ],
+      "scale_marginal_age_factor": 0.06260452178990256
+    },
+    {
+      "model": "cpl",
+      "physical_at_H0_70": [
+        0.32104182628361455,
+        70.0,
+        0.0,
+        -0.7625509046560949,
+        -0.8910164670156857
+      ],
+      "scale_marginal_age_factor": 0.06260452178990258
+    },
+    {
+      "model": "cpl",
+      "physical_at_H0_70": [
+        0.10000538654625818,
+        70.0,
+        0.0,
+        -0.7695374636807754,
+        0.9120589182862053
+      ],
+      "scale_marginal_age_factor": 0.06260452178990265
+    },
+    {
+      "model": "cpl",
+      "physical_at_H0_70": [
+        0.36352520101344193,
+        70.0,
+        0.0,
+        -0.7620963172921413,
+        -1.6427568090280278
+      ],
+      "scale_marginal_age_factor": 0.06260452178990253
+    }
+  ],
+  "fixed_q": 10100.0,
+  "radiation_for_this_identity_test": false,
+  "production_radiation_unchanged": true,
+  "max_relative_range": 5.985195000266336e-15,
+  "passed": true
+}

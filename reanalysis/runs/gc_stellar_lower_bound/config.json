@@ -1,0 +1,11 @@
+{
+  "name": "gc_stellar_lower_bound",
+  "model": "flat",
+  "bao": false,
+  "age": {
+    "mode": "lower_bound",
+    "mu": 13.39,
+    "sigma": 0.25079872407968906
+  },
+  "seed": 2026102315
+}

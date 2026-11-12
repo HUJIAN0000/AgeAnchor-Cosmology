@@ -1,0 +1,16 @@
+{
+  "name": "stellar_zform_sigma_0.70",
+  "model": "flat",
+  "bao": false,
+  "age": {
+    "mode": "stellar_zform",
+    "stellar_mu": 13.39,
+    "stellar_sigma": 0.7,
+    "zform_range": [
+      11.0,
+      30.0
+    ],
+    "zform_prior": "uniform_z"
+  },
+  "seed": 2026102333
+}

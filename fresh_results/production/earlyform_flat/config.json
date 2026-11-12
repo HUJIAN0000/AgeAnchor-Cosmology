@@ -1,0 +1,16 @@
+{
+  "name": "earlyform_flat",
+  "model": "flat",
+  "bao": true,
+  "age": {
+    "mode": "stellar_zform",
+    "stellar_mu": 13.61,
+    "stellar_sigma": 0.3397057550292606,
+    "zform_range": [
+      11.0,
+      50.0
+    ],
+    "zform_prior": "uniform_z"
+  },
+  "seed": 2026111228
+}

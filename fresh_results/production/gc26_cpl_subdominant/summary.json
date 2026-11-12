@@ -1,0 +1,159 @@
+{
+  "config": {
+    "name": "gc26_cpl_subdominant",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111224,
+    "early_subdominant": true
+  },
+  "fingerprint": "461f81ba7bd294d2aad580bed89bcef8ce312a0a8e68f17fa533828db8ca6900",
+  "source_hashes": {
+    "cosmology.py": "3abee30adeaf7f00ad19ffd2c46f25773b2cdcd7656b12e469e475446e6da41f",
+    "run_analysis.py": "921518c57021f0e43ddbb12e8d1faaa71b8ac55a94dfa467c288235a01fcf25d"
+  },
+  "sampled_names": [
+    "Om",
+    "H0",
+    "rd",
+    "w0",
+    "wa"
+  ],
+  "names": [
+    "Om",
+    "H0",
+    "rd",
+    "w0",
+    "wa",
+    "MB",
+    "t0"
+  ],
+  "steps": 16000,
+  "walkers": 48,
+  "burnin": 2000,
+  "production_draws": 672000,
+  "derived_draws": 60000,
+  "converged": true,
+  "tau_production": [
+    162.93410970767835,
+    44.28690681572417,
+    44.431058226616756,
+    46.89919571841542,
+    96.09294365204319
+  ],
+  "ESS_production": [
+    4124.366599514624,
+    15173.784947234219,
+    15124.555363334412,
+    14328.603928193437,
+    6993.229413736578
+  ],
+  "acceptance_mean": 0.4165729166666667,
+  "resumed_from_steps": 0,
+  "continuation_rng": {
+    "seed": 2026111224,
+    "restored_state": false
+  },
+  "wall_seconds": 51.494832277297974,
+  "truth": null,
+  "total_recorded_wall_seconds": 51.494832277297974,
+  "execution": {
+    "pid": 27496,
+    "numba_threads": 4,
+    "threading_layer": "tbb",
+    "BLAS_thread_limit": 1,
+    "batch_likelihood": "Numba prange over independent walker cosmologies"
+  },
+  "parameters": {
+    "Om": {
+      "q025": 0.22443640224644518,
+      "q16": 0.2795088135392258,
+      "median": 0.3031661434858157,
+      "q84": 0.31862086067877166,
+      "q975": 0.331057462104879
+    },
+    "H0": {
+      "q025": 63.9394383363571,
+      "q16": 65.5806379445056,
+      "median": 67.34223569071818,
+      "q84": 69.19678551325238,
+      "q975": 71.04996654295563
+    },
+    "rd": {
+      "q025": 140.5346167052809,
+      "q16": 144.17306025382493,
+      "median": 148.00373269309182,
+      "q84": 151.8102863738819,
+      "q975": 155.5193595922698
+    },
+    "w0": {
+      "q025": -0.9959760851353776,
+      "q16": -0.944682844589763,
+      "median": -0.887102734745786,
+      "q84": -0.8253539027724756,
+      "q975": -0.7594352282086931
+    },
+    "wa": {
+      "q025": -1.0604648882555252,
+      "q16": -0.6262237405661705,
+      "median": -0.17209244317633482,
+      "q84": 0.3186190558060834,
+      "q975": 0.7728286460107869
+    },
+    "MB": {
+      "q025": -19.539172264534777,
+      "q16": -19.4858419883986,
+      "median": -19.429465611749364,
+      "q84": -19.37238822168281,
+      "q975": -19.31660256876417
+    },
+    "t0": {
+      "q025": 13.121110819483576,
+      "q16": 13.45453217739233,
+      "median": 13.804521843621837,
+      "q84": 14.154419268509644,
+      "q975": 14.495029474759082
+    }
+  },
+  "bestfit": {
+    "sampled": {
+      "Om": 0.3053848207241719,
+      "H0": 67.26859937951315,
+      "rd": 148.16103948969504,
+      "w0": -0.8869901584738283,
+      "wa": -0.22823219690659402
+    },
+    "MB": -19.431378051611716,
+    "t0": 13.806975814615862,
+    "chi2_SN": 1386.0700116365124,
+    "chi2_BAO": 8.663773580966762,
+    "minus2logL_age_up_to_constant": 0.06076533186351263,
+    "optimizer_success": true
+  },
+  "H0_reference_difference_sigma": {
+    "Planck2018": 0.030792282285929607,
+    "SH0ES2022": 2.7316394356802745
+  },
+  "provenance": {
+    "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+    "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+    "desi_gaussian_bao_ALL_GCcomb_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "desi_gaussian_bao_ALL_GCcomb_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "software": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "numba": "0.67.0",
+    "pandas": "3.0.5",
+    "emcee": "3.1.6"
+  }
+}

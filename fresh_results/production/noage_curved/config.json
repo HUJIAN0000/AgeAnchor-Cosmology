@@ -1,0 +1,9 @@
+{
+  "name": "noage_curved",
+  "model": "curved",
+  "bao": true,
+  "age": {
+    "mode": "none"
+  },
+  "seed": 2026111203
+}

@@ -1,0 +1,1 @@
+Frozen reference PDFs and numerical TeX tables. Rebuild with python RUN_REPRO.py figures, then compare aa_revision/figures and aa_revision/table_*.tex. Samples and source hashes are in audit/figure_sources.json.

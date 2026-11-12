@@ -1,0 +1,7 @@
+{
+  "case": "gc2026_bao",
+  "independent_output_directory": true,
+  "complete_chain_bitwise_equal": true,
+  "log_prob_bitwise_equal": true,
+  "derived_samples_bitwise_equal": true
+}

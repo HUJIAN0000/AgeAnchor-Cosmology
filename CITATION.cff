@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "Please cite this version of AgeAnchor-Cosmology when using the code or frozen analysis products."
+type: software
+title: "AgeAnchor-Cosmology: a stellar-age-anchored inverse distance ladder"
+version: 2.0.0
+license: MIT
+repository-code: "https://github.com/HUJIAN0000/AgeAnchor-Cosmology"
+authors:
+  - family-names: "Hu"
+    given-names: "Jian"
+    orcid: "https://orcid.org/0000-0002-4797-4107"
+    affiliation: "Institute of Astronomy and Information, Dali University"
+  - family-names: "Liu"
+    given-names: "Yi"
+    orcid: "https://orcid.org/0000-0003-2271-6723"
+    affiliation: "Department of Engineering, Dali University"
+  - family-names: "Wang"
+    given-names: "Chen"
+    orcid: "https://orcid.org/0000-0001-8923-7757"
+    affiliation: "School of General Education and Foreign Languages, Anhui Institute of Information Technology"
+  - family-names: "Hu"
+    given-names: "Jian-Ping"
+    orcid: "https://orcid.org/0000-0002-5819-5002"
+    affiliation: "Ministry of Education Key Laboratory for Nonequilibrium Synthesis and Modulation of Condensed Matter, School of Physics, Xi'an Jiaotong University; Key Laboratory of Modern Astronomy and Astrophysics (Nanjing University), Ministry of Education"
+  - family-names: "Zhao"
+    given-names: "Jia"
+    orcid: "https://orcid.org/0009-0004-9093-6482"
+    affiliation: "Water Affairs Bureau of Dali Bai Autonomous Prefecture"
+  - family-names: "Zhu"
+    given-names: "Liangqing"
+    orcid: "https://orcid.org/0009-0001-8041-5243"
+    affiliation: "State Grid Zhejiang Electric Power Co., Ltd. Lishui Power Supply Company"

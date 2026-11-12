@@ -1,0 +1,16 @@
+{
+  "name": "gc25_no_bao",
+  "model": "flat",
+  "bao": false,
+  "age": {
+    "mode": "stellar_zform",
+    "stellar_mu": 13.39,
+    "stellar_sigma": 0.25079872407968906,
+    "zform_range": [
+      11.0,
+      30.0
+    ],
+    "zform_prior": "uniform_z"
+  },
+  "seed": 2026111227
+}

@@ -1,0 +1,12 @@
+{
+  "name": "fixed_delay_gc26_0p40",
+  "model": "flat",
+  "bao": false,
+  "age": {
+    "mode": "stellar_fixed_delay",
+    "stellar_mu": 13.61,
+    "stellar_sigma": 0.3397057550292606,
+    "fixed_delay_gyr": 0.4
+  },
+  "seed": 2026102721
+}

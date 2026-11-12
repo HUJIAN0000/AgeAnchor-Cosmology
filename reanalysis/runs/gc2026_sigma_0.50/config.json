@@ -1,0 +1,16 @@
+{
+  "name": "gc2026_sigma_0.50",
+  "model": "flat",
+  "bao": false,
+  "age": {
+    "mode": "stellar_zform",
+    "stellar_mu": 13.61,
+    "stellar_sigma": 0.5,
+    "zform_range": [
+      11.0,
+      30.0
+    ],
+    "zform_prior": "uniform_z"
+  },
+  "seed": 2026102727
+}

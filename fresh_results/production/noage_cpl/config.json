@@ -1,0 +1,9 @@
+{
+  "name": "noage_cpl",
+  "model": "cpl",
+  "bao": true,
+  "age": {
+    "mode": "none"
+  },
+  "seed": 2026111205
+}

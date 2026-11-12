@@ -1,0 +1,113 @@
+{
+  "config": {
+    "name": "joint_rho_1.0",
+    "model": "flat",
+    "bao": false,
+    "age": {
+      "mode": "joint",
+      "mu": 13.57,
+      "sigma": 0.2745906043549196,
+      "hd_extra_systematic": 0.5,
+      "rho": 1.0,
+      "formation_range": [
+        0.1,
+        1.0
+      ]
+    },
+    "seed": 2026102322
+  },
+  "sampled_names": [
+    "Om",
+    "H0"
+  ],
+  "names": [
+    "Om",
+    "H0",
+    "MB",
+    "t0"
+  ],
+  "steps": 8000,
+  "walkers": 48,
+  "burnin": 2000,
+  "production_draws": 288000,
+  "derived_draws": 60000,
+  "converged": true,
+  "tau_production": [
+    15.947271870435245,
+    16.607454049686865
+  ],
+  "ESS_production": [
+    18059.515278843723,
+    17341.6105285223
+  ],
+  "acceptance_mean": 0.6109557291666666,
+  "resumed_from_steps": 0,
+  "wall_seconds": 14.062475442886353,
+  "truth": null,
+  "execution": {
+    "pid": 12860,
+    "numba_threads": 4,
+    "threading_layer": "tbb",
+    "BLAS_thread_limit": 1,
+    "batch_likelihood": "Numba prange over independent walker cosmologies"
+  },
+  "parameters": {
+    "Om": {
+      "q025": 0.2977959122990651,
+      "q16": 0.3148420169779968,
+      "median": 0.3324691347726228,
+      "q84": 0.3507970735799563,
+      "q975": 0.36916412393674103
+    },
+    "H0": {
+      "q025": 65.04050404347801,
+      "q16": 66.5954645677276,
+      "median": 68.2794846311846,
+      "q84": 69.98028132653717,
+      "q975": 71.72413314458466
+    },
+    "MB": {
+      "q025": -19.504461015536922,
+      "q16": -19.456311277448748,
+      "median": -19.405638106181605,
+      "q84": -19.35490305691721,
+      "q975": -19.305031859551313
+    },
+    "t0": {
+      "q025": 12.898081722993732,
+      "q16": 13.150042973089647,
+      "median": 13.410979212961843,
+      "q84": 13.671442684988925,
+      "q975": 13.922379385431048
+    }
+  },
+  "bestfit": {
+    "sampled": {
+      "Om": 0.33244857826009344,
+      "H0": 68.19991547454042
+    },
+    "MB": -19.40798260282841,
+    "t0": 13.42302931779484,
+    "chi2_SN": 1386.4069692246135,
+    "chi2_BAO": 0.0,
+    "minus2logL_age_up_to_constant": 4.932276724823558,
+    "optimizer_success": true
+  },
+  "H0_reference_difference_sigma": {
+    "Planck2018": 0.4983698816915298,
+    "SH0ES2022": 2.396535679335924
+  },
+  "provenance": {
+    "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+    "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+    "desi_gaussian_bao_ALL_GCcomb_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "desi_gaussian_bao_ALL_GCcomb_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "software": {
+    "numpy": "1.26.4",
+    "scipy": "1.16.3",
+    "numba": "0.62.1",
+    "pandas": "2.3.3",
+    "emcee": "3.1.6"
+  }
+}

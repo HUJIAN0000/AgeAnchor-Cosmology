@@ -1,0 +1,114 @@
+[
+  {
+    "original_alias": "gc2026_no_bao",
+    "fresh_configuration": "gc26_no_bao",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102337,
+    "fresh_seed": 2026111206,
+    "fresh_summary_sha256": "50f1ec44bb9ccb3e426c0a94f38643e026b3068276b4348a32ba3b502fd63d9f"
+  },
+  {
+    "original_alias": "gc2026_bao",
+    "fresh_configuration": "gc26_flat",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102338,
+    "fresh_seed": 2026111200,
+    "fresh_summary_sha256": "4d03bc467389f1a7045630844f567d496e188775fcfa6f4eff65847cc8c3f2ae"
+  },
+  {
+    "original_alias": "gc2026_curvature",
+    "fresh_configuration": "gc26_curved",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102339,
+    "fresh_seed": 2026111202,
+    "fresh_summary_sha256": "ece642650c75865b62abc2fa7165f6e9cdae0f27e5368a5f941ebc7f28facff0"
+  },
+  {
+    "original_alias": "gc2026_cpl",
+    "fresh_configuration": "gc26_cpl",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102340,
+    "fresh_seed": 2026111204,
+    "fresh_summary_sha256": "686d8ea47768fd3b5698d94165758df0c52a8234f0886c0c71314ef18877002e"
+  },
+  {
+    "original_alias": "gc2026_bao_seed2",
+    "fresh_configuration": "gc26_flat_seed2",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102601,
+    "fresh_seed": 2026112200,
+    "fresh_summary_sha256": "842d904a35b1969332ff1fda60871b56f066be95e5bd85ebd8e8455dfa83f54d"
+  },
+  {
+    "original_alias": "gc2026_cpl_seed2",
+    "fresh_configuration": "gc26_cpl_seed2",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102603,
+    "fresh_seed": 2026112204,
+    "fresh_summary_sha256": "3f9563dfb17ac23203e790d2df632969966fa16004aca5d34e93d763f18b955f"
+  },
+  {
+    "original_alias": "gc2026_cpl_restricted_Om",
+    "fresh_configuration": "gc26_cpl_Om025",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102341,
+    "fresh_seed": 2026111223,
+    "fresh_summary_sha256": "f6f040890fdb363573444dabac229c7742af3b00d81b273e039622819b900152"
+  },
+  {
+    "original_alias": "gc2026_cpl_early_subdominant",
+    "fresh_configuration": "gc26_cpl_subdominant",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102342,
+    "fresh_seed": 2026111224,
+    "fresh_summary_sha256": "ada7b7c6802aa341632a83f89b0121cebc916b63cc7531f16613f8fb4157f372"
+  },
+  {
+    "original_alias": "gc2026_bao_zmax50",
+    "fresh_configuration": "earlyform_flat",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102343,
+    "fresh_seed": 2026111228,
+    "fresh_summary_sha256": "4a9bf0de3d5913ca792853f927127349f548ca95daf6c3e869e5d9ccebaa8957"
+  },
+  {
+    "original_alias": "gc2026_bao_zmin6",
+    "fresh_configuration": "lateform_flat",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102344,
+    "fresh_seed": 2026111215,
+    "fresh_summary_sha256": "0cec0b6f0840488850582dcb5e6b0337b74de7856bc0245db18fbfb69a8f7988"
+  },
+  {
+    "original_alias": "stellar_zform_bao",
+    "fresh_configuration": "gc25_flat",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102325,
+    "fresh_seed": 2026111214,
+    "fresh_summary_sha256": "c186825eb01cc670886ee0bf4c2d56fe7b13165ec84c5070b3e1bfeadec65e09"
+  },
+  {
+    "original_alias": "stellar_zform_no_bao",
+    "fresh_configuration": "gc25_no_bao",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102324,
+    "fresh_seed": 2026111227,
+    "fresh_summary_sha256": "a2a14341dec0671f09aae163e55574003d87d37c6333203f66a72e62cd0655d9"
+  },
+  {
+    "original_alias": "stellar_zform_curvature",
+    "fresh_configuration": "gc25_curved",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102326,
+    "fresh_seed": 2026111217,
+    "fresh_summary_sha256": "c8e41e80376979d2ff0ab249772789ecf656069a891082e8c4332796983f27af"
+  },
+  {
+    "original_alias": "stellar_zform_cpl",
+    "fresh_configuration": "gc25_cpl",
+    "same_scientific_settings": true,
+    "historical_seed": 2026102327,
+    "fresh_seed": 2026111220,
+    "fresh_summary_sha256": "9df8d058b3676c6329e4297f838f1d2bb172fde4b718815c7622c6374fabb9ca"
+  }
+]

@@ -1,0 +1,427 @@
+[
+  {
+    "name": "gc26_flat",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111200
+  },
+  {
+    "name": "noage_flat",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "none"
+    },
+    "seed": 2026111201
+  },
+  {
+    "name": "gc26_curved",
+    "model": "curved",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111202
+  },
+  {
+    "name": "noage_curved",
+    "model": "curved",
+    "bao": true,
+    "age": {
+      "mode": "none"
+    },
+    "seed": 2026111203
+  },
+  {
+    "name": "gc26_cpl",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111204
+  },
+  {
+    "name": "noage_cpl",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "none"
+    },
+    "seed": 2026111205
+  },
+  {
+    "name": "gc26_no_bao",
+    "model": "flat",
+    "bao": false,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111206
+  },
+  {
+    "name": "gc26_flat_seed2",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026112200
+  },
+  {
+    "name": "noage_flat_seed2",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "none"
+    },
+    "seed": 2026112201
+  },
+  {
+    "name": "gc26_curved_seed2",
+    "model": "curved",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026112202
+  },
+  {
+    "name": "noage_curved_seed2",
+    "model": "curved",
+    "bao": true,
+    "age": {
+      "mode": "none"
+    },
+    "seed": 2026112203
+  },
+  {
+    "name": "gc26_cpl_seed2",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026112204
+  },
+  {
+    "name": "noage_cpl_seed2",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "none"
+    },
+    "seed": 2026112205
+  },
+  {
+    "name": "gc26_no_bao_seed2",
+    "model": "flat",
+    "bao": false,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026112206
+  },
+  {
+    "name": "gc25_flat",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.39,
+      "stellar_sigma": 0.25079872407968906,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111214
+  },
+  {
+    "name": "lateform_flat",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        6.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111215
+  },
+  {
+    "name": "wideage_flat",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.7,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111216
+  },
+  {
+    "name": "gc25_curved",
+    "model": "curved",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.39,
+      "stellar_sigma": 0.25079872407968906,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111217
+  },
+  {
+    "name": "lateform_curved",
+    "model": "curved",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        6.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111218
+  },
+  {
+    "name": "wideage_curved",
+    "model": "curved",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.7,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111219
+  },
+  {
+    "name": "gc25_cpl",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.39,
+      "stellar_sigma": 0.25079872407968906,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111220
+  },
+  {
+    "name": "lateform_cpl",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        6.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111221
+  },
+  {
+    "name": "wideage_cpl",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.7,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111222
+  },
+  {
+    "name": "gc26_cpl_Om025",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111223,
+    "Om_bounds": [
+      0.25,
+      0.6
+    ]
+  },
+  {
+    "name": "gc26_cpl_subdominant",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111224,
+    "early_subdominant": true
+  },
+  {
+    "name": "agebound_Hmin45",
+    "model": "flat",
+    "bao": false,
+    "age": {
+      "mode": "lower_bound",
+      "mu": 13.61,
+      "sigma": 0.3397057550292606
+    },
+    "seed": 2026111225,
+    "H0_bounds": [
+      45.0,
+      100.0
+    ]
+  },
+  {
+    "name": "agebound_Hmin50",
+    "model": "flat",
+    "bao": false,
+    "age": {
+      "mode": "lower_bound",
+      "mu": 13.61,
+      "sigma": 0.3397057550292606
+    },
+    "seed": 2026111226,
+    "H0_bounds": [
+      50.0,
+      100.0
+    ]
+  },
+  {
+    "name": "gc25_no_bao",
+    "model": "flat",
+    "bao": false,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.39,
+      "stellar_sigma": 0.25079872407968906,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111227
+  },
+  {
+    "name": "earlyform_flat",
+    "model": "flat",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.61,
+      "stellar_sigma": 0.3397057550292606,
+      "zform_range": [
+        11.0,
+        50.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111228
+  }
+]

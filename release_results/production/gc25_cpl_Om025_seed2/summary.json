@@ -1,0 +1,162 @@
+{
+  "config": {
+    "name": "gc25_cpl_Om025_seed2",
+    "model": "cpl",
+    "bao": true,
+    "age": {
+      "mode": "stellar_zform",
+      "stellar_mu": 13.39,
+      "stellar_sigma": 0.25079872407968906,
+      "zform_range": [
+        11.0,
+        30.0
+      ],
+      "zform_prior": "uniform_z"
+    },
+    "seed": 2026111301,
+    "Om_bounds": [
+      0.25,
+      0.6
+    ]
+  },
+  "fingerprint": "37f9690e1abf3b49a37f27bf947658058d538f7bcd9275f803d524eba461c1eb",
+  "source_hashes": {
+    "cosmology.py": "3abee30adeaf7f00ad19ffd2c46f25773b2cdcd7656b12e469e475446e6da41f",
+    "run_analysis.py": "921518c57021f0e43ddbb12e8d1faaa71b8ac55a94dfa467c288235a01fcf25d"
+  },
+  "sampled_names": [
+    "Om",
+    "H0",
+    "rd",
+    "w0",
+    "wa"
+  ],
+  "names": [
+    "Om",
+    "H0",
+    "rd",
+    "w0",
+    "wa",
+    "MB",
+    "t0"
+  ],
+  "steps": 8000,
+  "walkers": 48,
+  "burnin": 2000,
+  "production_draws": 288000,
+  "derived_draws": 60000,
+  "converged": true,
+  "tau_production": [
+    42.20496378673379,
+    33.402684973647624,
+    33.63551937885967,
+    35.13301051961349,
+    37.83426325564355
+  ],
+  "ESS_production": [
+    6823.841893462932,
+    8622.061377018399,
+    8562.377073951517,
+    8197.418773413112,
+    7612.147699401559
+  ],
+  "acceptance_mean": 0.44600260416666665,
+  "resumed_from_steps": 0,
+  "continuation_rng": {
+    "seed": 2026111301,
+    "restored_state": false
+  },
+  "wall_seconds": 24.145848989486694,
+  "truth": null,
+  "total_recorded_wall_seconds": 24.145848989486694,
+  "execution": {
+    "pid": 43300,
+    "numba_threads": 4,
+    "threading_layer": "tbb",
+    "BLAS_thread_limit": 1,
+    "batch_likelihood": "Numba prange over independent walker cosmologies"
+  },
+  "parameters": {
+    "Om": {
+      "q025": 0.26342730079845705,
+      "q16": 0.28664562695914175,
+      "median": 0.3052949693777261,
+      "q84": 0.31941302096630536,
+      "q975": 0.33168559298107825
+    },
+    "H0": {
+      "q025": 65.57236678277732,
+      "q16": 66.94459201261202,
+      "median": 68.40413105638012,
+      "q84": 69.88601230834612,
+      "q975": 71.4147021683523
+    },
+    "rd": {
+      "q025": 140.07343778784218,
+      "q16": 142.8305753663618,
+      "median": 145.68407733951278,
+      "q84": 148.64586307683388,
+      "q975": 151.4925148536025
+    },
+    "w0": {
+      "q025": -0.99853667316231,
+      "q16": -0.9448520332524363,
+      "median": -0.8860819848550643,
+      "q84": -0.8241929854903333,
+      "q975": -0.7597498104034037
+    },
+    "wa": {
+      "q025": -1.0700693434802406,
+      "q16": -0.6517097758179968,
+      "median": -0.22574146979562204,
+      "q84": 0.1989790744568939,
+      "q975": 0.5442999658093792
+    },
+    "MB": {
+      "q025": -19.48276105935743,
+      "q16": -19.43972670978843,
+      "median": -19.395180198583326,
+      "q84": -19.35041359808844,
+      "q975": -19.306179399973203
+    },
+    "t0": {
+      "q025": 13.067752696830638,
+      "q16": 13.318030809425753,
+      "median": 13.578920628984584,
+      "q84": 13.846738564676766,
+      "q975": 14.107156778153824
+    }
+  },
+  "bestfit": {
+    "sampled": {
+      "Om": 0.3054102000075082,
+      "H0": 68.38277179430965,
+      "rd": 145.74693293377663,
+      "w0": -0.8869745399474294,
+      "wa": -0.2286159536882857
+    },
+    "MB": -19.395703395049406,
+    "t0": 13.582044550690668,
+    "chi2_SN": 1386.0702169990955,
+    "chi2_BAO": 8.66371477770543,
+    "minus2logL_age_up_to_constant": 0.10568618345746739,
+    "optimizer_success": true
+  },
+  "H0_reference_difference_sigma": {
+    "Planck2018": 0.6464170275199242,
+    "SH0ES2022": 2.573661040960878
+  },
+  "provenance": {
+    "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+    "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+    "desi_gaussian_bao_ALL_GCcomb_mean.txt": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+    "desi_gaussian_bao_ALL_GCcomb_cov.txt": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509"
+  },
+  "software": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "numba": "0.67.0",
+    "pandas": "3.0.5",
+    "emcee": "3.1.6"
+  }
+}

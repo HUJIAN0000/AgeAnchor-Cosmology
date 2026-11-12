@@ -1,0 +1,12 @@
+{
+  "name": "fixed_delay_gc25_0p55",
+  "model": "flat",
+  "bao": false,
+  "age": {
+    "mode": "stellar_fixed_delay",
+    "stellar_mu": 13.39,
+    "stellar_sigma": 0.25079872407968906,
+    "fixed_delay_gyr": 0.55
+  },
+  "seed": 2026102711
+}

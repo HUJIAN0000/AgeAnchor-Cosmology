@@ -1,0 +1,9 @@
+{
+  "name": "noage_flat",
+  "model": "flat",
+  "bao": true,
+  "age": {
+    "mode": "none"
+  },
+  "seed": 2026111201
+}
